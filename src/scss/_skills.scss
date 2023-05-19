@@ -1,0 +1,33 @@
+.skills {
+  &__inner {
+    background-color: #161513;
+    padding: 2rem 2rem 1rem;
+    transform: rotate(-4.93deg) translateX(-1%);
+    width: 102%;
+    margin-bottom: 7.73rem;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    font-size: 1.125rem;
+    color: #fff;
+    position: relative;
+    &::after {
+      content: "";
+      width: 21px;
+      height: 21px;
+      background: url("../img/star.svg");
+      position: absolute;
+      right: -3rem;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 0.8rem;
+    }
+  }
+}

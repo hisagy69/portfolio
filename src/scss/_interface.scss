@@ -1,0 +1,12 @@
+.button-call {
+  padding: 0.56rem 1.625rem;
+  background-color: transparent;
+  border: 1px solid #000;
+  font-size: 16px;
+  transition: all 0.3s;
+  white-space: nowrap;
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}

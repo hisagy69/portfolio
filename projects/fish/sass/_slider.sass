@@ -1,0 +1,33 @@
+.slider
+	position: relative
+	min-height: 537px
+	display: flex
+	align-items: center
+	overflow: visible
+	&__slide
+		opacity: 0
+		width: 100%
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		transition: opacity 0.5s
+		&_active
+			opacity: 1
+			z-index: 9
+	&__pagination
+		margin-top: 86px
+.pagination
+	display: flex
+	justify-content: center
+	position: relative
+	z-index: 10
+	&__bullet
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		background-color: #bababa
+		cursor: pointer
+		&:not(:last-child)
+			margin-right: 20px
+		&_active
+			background-color: rgb(227, 26, 28)

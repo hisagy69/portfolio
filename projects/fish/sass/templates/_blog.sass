@@ -1,0 +1,88 @@
+.blog
+	padding-bottom: 54px
+	&__link
+		font-size: 17px;
+		font-family: "Cera Pro";
+		color: rgb(227, 26, 28);
+		line-height: 1.765;
+		position: absolute;
+		right: 0
+		top: 12px
+		cursor: pointer
+		&>span
+			position: relative
+			&::before
+				content: ""
+				width: 0
+				height: 1px
+				background: rgb(227, 26, 28)
+				position: absolute
+				bottom: -5px
+				left: 50%
+				transform: translateX(-50%)
+				transition: all 0.5s
+			&:hover
+				&::before
+					width: 100%
+	&__cards
+		margin-top: 16px
+	&__card
+		margin-bottom: 44px
+		cursor: pointer
+	&__image
+		width: 100%
+		margin-bottom: 5px
+		&:hover
+			filter: brightness(0.5)
+	&__text
+		font-size: 17px
+		font-family: "Cera Pro"
+		line-height: 28px
+	&__title
+		font-size: 28px
+		font-family: "Candara"
+		color: rgb(10, 10, 10)
+		font-weight: bold
+		line-height: 1.23
+		display: inline-block
+	&__date
+		font-family: "Cera Pro"
+		font-size: 13px
+		color: #959595
+		line-height: 38px
+	&__text
+		display: none
+	&__pagination
+		font-size: 17px
+		text-align: center
+		font-family: "Cera Pro"
+		margin-bottom: 14px
+		margin: auto
+	& .col-40, .col-60
+		width: auto
+.blog.active
+	padding-bottom: 130px
+	& .blog__link
+		display: none
+	& .blog__message
+		display: block
+	& .blog__card
+		display: none
+	& .blog__message
+		margin-left: 59px
+		&>.blog__title
+			font-size: 36px
+	& .blog__text
+		display: block
+	& .blog__title
+		line-height: 0.5
+		margin-bottom: 26px
+	& .col-30
+		width: auto
+	& .col-40
+		width: 44%
+	& .col-60
+		width: 60%
+	& .card_active
+		display: flex 
+

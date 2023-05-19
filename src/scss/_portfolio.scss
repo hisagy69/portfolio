@@ -1,0 +1,93 @@
+.portfolio {
+  &__inner {
+    margin-bottom: 7.5rem;
+  }
+  &__title {
+    margin-bottom: 0.625rem;
+  }
+  &__subtitle {
+    margin-bottom: 3.781rem;
+  }
+  &__work {
+    margin-bottom: 6rem;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+.work {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 2.75rem;
+  align-items: center;
+  grid-template-areas: "image name" "image title" "image link";
+  &:nth-child(even) {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "name image" "title image" "link image";
+  }
+  @media screen and (max-width: 992px) {
+    grid-template-columns: auto;
+    grid-column-gap: 0;
+    grid-template-areas: "title" "name" "image" "link";
+    justify-content: center;
+    &:nth-child(even) {
+      grid-template-columns: auto;
+      grid-template-areas: "title" "name" "image" "link";
+    }
+  }
+  &__image {
+    grid-area: image;
+    & img {
+      max-width: 100%;
+    }
+    @media screen and (max-width: 992px) {
+      margin-bottom: 1rem;
+    }
+  }
+  &__name {
+    font-size: 1.125rem;
+    background-color: #e94d35;
+    color: #fff;
+    padding: 0.75rem;
+    width: fit-content;
+    margin-bottom: 3.125rem;
+    grid-area: name;
+    @media screen and (max-width: 992px) {
+      margin-bottom: -2.6rem;
+    }
+  }
+  &__title {
+    font-size: 2.812rem;
+    line-height: 3.5rem;
+    margin-bottom: 3.125rem;
+    grid-area: title;
+    @media screen and (max-width: 1200px) {
+      font-size: 1.8rem;
+      margin-bottom: 2.2rem;
+      line-height: 2.5rem;
+    }
+  }
+  &__link {
+    font-size: 1.25rem;
+    color: #000;
+    position: relative;
+    grid-area: link;
+    width: fit-content;
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      opacity: 0;
+      background-color: #000;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      opacity: 1;
+      bottom: -5px;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  background-color: #F5F5F5;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F5F5F5;
+    z-index: 3;
+  }
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.8rem 0;
+    position: relative;
+    grid-template-areas: "logo menu button-call";
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+      grid-template-areas: "logo logo" "button-call  burger";
+    }
+  }
+  &__burger {
+    z-index: 3;
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    grid-area: burger;
+    justify-self: end;
+    cursor: pointer;
+    &::before, &::after, & span {
+      position: absolute;
+      background-color: #000;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s;
+    }
+    & span {
+      top: 9px;
+    }
+    &::before, &::after {
+      content: "";
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &_active {
+      &::before {
+        rotate: 45deg;
+        top: 9px;
+      }
+      &::after {
+        rotate: -45deg;
+        bottom: 9px;
+      }
+      & span {
+        transform: scale(0);
+      }
+    }
+    @media screen and (max-width: 992px) {
+      display: block;
+    }
+  }
+  &__logo {
+    justify-self: start;
+    white-space: nowrap;
+    position: relative;
+    z-index: 3;
+    grid-area: logo;
+    img {
+      vertical-align: middle;
+    }
+  }
+  &__menu {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    grid-area: menu;
+    @media screen and (max-width: 992px) {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #161513;
+      grid-column: span 3;
+      flex-direction: column;
+      padding-top: 8rem;
+      z-index: 1;
+      transition: all 0.4s;
+      overflow: auto;
+      &_active {
+        left: 0;
+      }
+    }
+  }
+  &__link {
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      opacity: 0;
+      background-color: #000;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      opacity: 1;
+      bottom: -5px;
+    }
+    @media screen and (max-width: 992px) {
+      color: #fff;
+      margin-bottom: 2rem;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__button-call {
+    align-self: stretch;
+    justify-self: end;
+    z-index: 3;
+    grid-area: button-call;
+    @media screen and (max-width: 992px) {
+      justify-self: start;
+    }
+  }
+}
