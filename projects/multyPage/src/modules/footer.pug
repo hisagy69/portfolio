@@ -1,0 +1,34 @@
+footer.footer
+	.container.align-center
+		.footer__logo
+			a(href="index.html")
+				img(src=require("./img/logo.png").default, alt="logo")
+		.footer__city-list.city-list
+			.city-enter Выберите город
+				img(src=require("./img/arrow-top.png").default, alt="arrow")
+			ul.d-none
+				a(href="#")
+					li.city-list__item Астана 
+				a(href="#")
+					li.city-list__item Новокузнецк 
+				a(href="#")
+					li.city-list__item Калининград
+		nav.footer__nav.nav
+			ul.flex
+				li.nav__item 
+					a(href="index.html") О нас
+				li.nav__item 
+					a(href="search.html") Статистика
+				li.nav__item 
+					a(href="news.html") Новости
+				li.nav__item 
+					a(href="contacts.html") Контакты
+		.footer__phone.phone 
+			a(href="tel:+77024407007") +7 702 #[span 440 70 07] 
+		button.footer__button.button(data-toggle="modal") перезвоните мне
+	block copy
+		.footer__copyright
+			.container.align-center.justify-space-between
+				p © www.pro-football.kz 2008-2015. Все права защищены.
+				p.align-center Сделано в:
+					img(src=require("./img/web.png").default, alt="web")

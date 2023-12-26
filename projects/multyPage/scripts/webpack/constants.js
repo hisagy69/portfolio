@@ -1,0 +1,15 @@
+const {resolve} = require('path');
+const {path: ROOT_DIRECTORY} = require('app-root-path');
+exports.ROOT_DIRECTORY = ROOT_DIRECTORY;
+exports.SRC_DIRECTORY = resolve(ROOT_DIRECTORY, './src');
+exports.DIST_DIRECTORY = resolve(ROOT_DIRECTORY, './dist/');
+exports.FONTS = resolve(ROOT_DIRECTORY, './src/fonts');
+exports.FONTSTO = resolve(ROOT_DIRECTORY, './dist/fonts/');
+exports.IMG = resolve(ROOT_DIRECTORY, './src/img');
+exports.IMGTO = resolve(ROOT_DIRECTORY, './dist/img/');
+exports.MAILER = resolve(ROOT_DIRECTORY, './src/phpmailer/');
+exports.MAILERTO = resolve(ROOT_DIRECTORY, './dist/phpmailer/');
+exports.SEND = resolve(ROOT_DIRECTORY, './src/send.php');
+exports.SENDTO = resolve(ROOT_DIRECTORY, './dist/');
+exports.HOST = 'localhost';
+exports.PORT = 3000;

@@ -1,0 +1,52 @@
+.container
+	width: 1170px
+	margin: auto
+	overflow: visible
+.align-center
+	display: flex
+	align-items: center
+.justify-space-between
+	display: flex
+	justify-content: space-between
+.wrap
+	display: flex
+	flex-wrap: wrap
+.col
+	&-30
+		width: 31.5%
+	&-40
+		width: 40%
+	&-60
+		width: 60%
+
+.relative
+	position: relative
+.card
+	position: relative
+	&__header
+		font-size: 36px
+		font-family: "Candara"
+		color: rgb(10, 10, 10)
+		font-weight: bold
+		line-height: 1.2
+		margin-bottom: 14px
+	&__description
+		font-family: "Cera Pro"
+		font-size: 17px
+		line-height: 1.7
+		margin-bottom: 13px
+	&__text
+		width: 46.2%
+		margin-top: -9px
+	&__image
+		width: 48.7%
+		height: fit-content
+	&__bg
+		position: absolute
+		z-index: -1
+		&_right
+			top: -79px
+			left: 513px
+		&_left
+			top: -60px
+			left: 166px

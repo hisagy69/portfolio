@@ -1,0 +1,168 @@
+extends layout/main
+
+block links
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=8bbb09ba-b39a-460b-b485-44da6dff4991&lang=ru_RU")
+block variables
+	- var pageTitle = 'Главная'
+block hero
+	.hero
+		.container
+			h1.hero__title академия футбола
+			p.hero__description для детей от 3 до 16 лет
+			form.hero__form#hero-form(method="POST")
+				.hero__inputs
+					.input-wrap
+						input(class="hero__input", id="user-name", data-type="name", type="text", placeholder="Ваше имя")
+					.input-wrap
+						input(class="hero__input", id="user-phone", data-type="phone", type="tel", placeholder="Номер телефона")
+				button.button.hero__button Записаться на тренеровку
+			p.hero__message Поделитесь с друзьями им будет интересно
+			.hero__social.justify-center
+				a(href="https://vk.com/").hero__link
+					include img/vk.svg
+				a(href="https://instagram.com/").hero__link
+					include img/ig.svg
+				a(href="https://youtube.com/").hero__link
+					include img/yb.svg
+block content
+	section.section.advantages
+		.container
+			h2.section__title.advantages__title.
+				Более #[span 800 детей] пришли обучение в нашей академии!
+			.section__ball
+				img(src=require("./img/ball.png").default, alt="ball")
+			.cards.advantages__cards.wrap
+				.cards__card
+					.cards__image
+						img(src=require("./img/ball-mono.png").default, alt="ball")
+					p.cards__text.
+						Новый профессиональный инвентарь и экипировка
+				.cards__card
+					.cards__image
+						img(src=require("./img/socer.png").default, alt="socer")
+					p.cards__text.
+						Современные спортивные залы и мини-футбольные поля
+				.cards__card
+					.cards__image
+						img(src=require("./img/reward.png").default, alt="reward")
+					p.cards__text.
+						Товарищеские матчи с детсикими футбольными школами
+				.cards__card
+					.cards__image
+						img(src=require("./img/go.png").default, alt="go")
+					p.cards__text.
+						Социальная программа и скидки для семей с особым статусом
+			.descriptions.advantages__descriptions.align-center.wrap
+				.descriptions__title
+					strong академия
+					p.
+						предоставляет возможность каждому ребенку почувствовать себя
+					strong футболистом
+				.descriptions__text
+					p.
+						#[span.strong Академия «Pro Football»]  предоставляет возможность каждому ребенку почувствовать себя футболистом любительского и профессионального уровней. Юный воспитанник получит как правильное физиологическое развитие, так и морально – психологическое, овладевая всеми навыками футболиста, игры в команде и индивидуального мастерства.
+					p.
+						Методика тренировок разрабатывается опытными тренерами на основе методик ведущих европейских футбольных центров. 
+					p.strong.
+						Все тренеры и помощники тренеров обладают лицензиями категорий «В», «С» UEFA. 
+				.descriptions__video
+					span посмотрите наше видео
+					button
+					.descriptions__modal.d-none
+						#player
+	section.section.groups
+		.container
+			h2.section__title.groups__title.
+				Наши группы
+			.section__ball
+				img(src=require("./img/ball.png").default, alt="ball")
+			.cards.groups__cards.wrap
+				.groups__card
+					.groups-wrap
+						strong.groups__name "babystart"
+						p.groups__description В этой группе тренируются дети от 3- 4,5 лет!
+						span.groups__price от 12 690 тенге
+						.groups__button
+						button#start(data-toggle="modal") Подробнее
+				.groups__card
+					.groups-wrap
+						strong.groups__name "Beginners"
+						p.groups__description В этой группе тренируются дети от 5- 6 лет!
+						span.groups__price от 14 290 тенге
+						.groups__button
+						button#begin(data-toggle="modal") Подробнее
+				.groups__card
+					.groups-wrap
+						strong.groups__name "Ювеналы"
+						p.groups__description В этой группе тренируются дети от 7 - 8 лет!
+						span.groups__price от 15 300 тенге
+						.groups__button
+						button#uven(data-toggle="modal") Подробнее
+				.groups__card
+					.groups-wrap
+						strong.groups__name "Ювеналы 2"
+						p.groups__description В этой группе тренеруются дети от 9- 12 лет!
+						span.groups__price от 17 500 тенге
+						.groups__button
+						button#uven2(data-toggle="modal") Подробнее
+				.groups__card
+					.groups-wrap
+						strong.groups__name "Юниоры"
+						p.groups__description В этой группе тренируются дети от 13- 16 лет!
+						span.groups__price от 18 900 тенге
+						.groups__button
+						button#junior(data-toggle="modal") Подробнее
+	section.section.abonements
+		.container
+			h2.section__title.abonements__title.
+				Наши абонементы
+			.section__ball
+				img(src=require("./img/ball.png").default, alt="ball")
+			.cards.abonements__cards.wrap
+				.abonements__card
+					.abonements__name Абонемент “Light”
+					ul.abonements__list
+						li.abonements__item 2 раза в неделю
+						li.abonements__item По выходным дням
+						li.abonements__item 1,5 часа занятий
+						li.abonements__item 8 занятий в месяц
+						li.abonements__item Бесплатная форма
+					.abonements__free бесплатная пробная тренировка
+					button.button.abonements__button#light(data-toggle="modal") Записаться на тренировку
+				.abonements__card
+					.abonements__name Абонемент “INTENSIVE”
+					ul.abonements__list
+						li.abonements__item 3 раза в неделю
+						li.abonements__item Расписание уточнять
+						li.abonements__item 1 час занятий
+						li.abonements__item 12 занятий в месяц
+						li.abonements__item Бесплатная форма
+					.abonements__free бесплатная пробная тренировка
+					button.button.abonements__button#light(data-toggle="modal") Записаться на тренировку
+	section.section.filials
+		.container
+			h2.section__title.filials__title.
+				Наши филиалы
+			.section__ball
+				img(src=require("./img/ball.png").default, alt="ball")
+			.flex.filials-wrap.align-center.justify-space-between
+				.filials__share
+					include img/share.svg
+				.filials__adres
+					a(href="#", data-nord="51.146348", data-west="71.389538")
+						div.filials__link
+							div #[strong QSI]
+							div #[span ул. Баян Сулу, 15] 
+					a(href="#", data-nord="50.065585", data-west="72.975765")
+						div.filials__link
+							div #[strong Дворец «Жастар»]
+							div #[span проспект Республики, 34]
+					a(href="#", data-nord="55.732605", data-west="52.642327")
+						div.filials__link
+							div #[strong Тарлан АРЕНА]
+							div #[span ул. Г. Алиева с пересечением Тауелсыздык]
+					a(href="#", data-nord="51.149851", data-west="71.438361")
+						div.filials__link
+							div #[strong Ташенова 16А]
+							div #[span улицаТашенова 16А] 
+				.map#map
