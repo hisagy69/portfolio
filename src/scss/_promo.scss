@@ -1,0 +1,102 @@
+.promo {
+  &__inner {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60% 1fr;
+    grid-column-gap: 4.187rem;
+    grid-template-areas: "text avatar" "skill-list avatar" "call avatar";
+    align-items: center;
+    padding-top: 8.125rem;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: auto;
+      grid-column-gap: 0;
+      grid-template-areas: "text" "avatar" "skill-list" "call";
+      margin-bottom: 3rem;
+      padding-top: 9.125rem;
+    }
+  }
+  &__text {
+    grid-area: text;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 2.187rem;
+    @media screen and (max-width: 1200px) {
+      font-size: 2.5rem;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 1.39rem;
+      & img {
+        width: 17px;
+      }
+    }
+  }
+  &__skill-list {
+    grid-area: skill-list;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 1.5rem;
+      justify-content: center;
+    }
+  }
+  &__skill-item {
+    font-size: 1.437rem;
+    &:not(:first-child) {
+      position: relative;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url("../img/star.svg") no-repeat center/100%;
+        position: absolute;
+        left: -1.625rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+  &__call {
+    grid-area: call;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 992px) {
+      justify-self: center;
+    }
+  }
+  &__question {
+    padding: 0.69rem 1.687rem;
+    color: #fff;
+    font-size: 1rem;
+    background-color: #000;
+    align-self: stretch;
+  }
+  &__avatar {
+    grid-area: avatar;
+    max-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    justify-self: end;
+    border-radius: 50%;
+    & img {
+      width: 100%;
+    }
+    @media screen and (max-width: 992px) {
+      width: 40%;
+      justify-self: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

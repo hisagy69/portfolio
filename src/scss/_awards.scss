@@ -1,0 +1,61 @@
+.awards {
+  &__inner {
+    margin-bottom: 7.5rem;
+  }
+  &__title {
+    margin-bottom: 0.625rem;
+  }
+  &__subtitle {
+    margin-bottom: 3.781rem;
+  }
+  &__item {
+    margin-bottom: 1.5rem;
+    border: 2px solid #000;
+    padding: 2.5rem 2.125rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr 8.75rem 3.375rem;
+    grid-template-areas: "number title position year" "number subtitle position year";
+    @media screen and (max-width: 576px) {
+      grid-template-columns: auto 1fr 1fr;
+      grid-template-areas: "number title title" "number position year" "number subtitle subtitle";
+    }
+  }
+}
+.item {
+  &__number {
+    font-size: 1.125rem;
+    grid-area: number;
+    width: 3rem;
+    height: 3rem;
+    color: #fff;
+    background-color: #E94D35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+  }
+  &__title {
+    font-size: 1.437rem;
+    grid-area: title;
+    margin-bottom: 2rem;
+  }
+  &__subtitle {
+    font-size: 1.125rem;
+    grid-area: subtitle;
+  }
+  &__position, &__year {
+    font-size: 1rem;
+    justify-self: end;
+    white-space: nowrap;
+  }
+  &__position {
+    grid-area: position;
+    @media screen and (max-width: 576px) {
+      justify-self: start;
+    }
+  }
+  &__year {
+    grid-area: year;
+  }
+}

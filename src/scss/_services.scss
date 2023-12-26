@@ -1,0 +1,29 @@
+.services {
+  &__inner {
+    margin-bottom: 10rem;
+  }
+  &__title {
+    margin-bottom: 0.625rem;
+  }
+  &__subtitle {
+    margin-bottom: 3.781rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
+  }
+  &__item {
+    border: 2px solid #161513;
+    padding: 1.875rem;
+    color: #161513;
+  }
+  &__name {
+    font-size: 1.937rem;
+    margin-bottom: 1.75rem;
+  }
+  &__description {
+    font-size: 1.125rem;
+  }
+}

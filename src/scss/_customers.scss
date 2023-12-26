@@ -1,0 +1,25 @@
+.customers {
+  &__inner {
+    margin-bottom: 7.5rem;
+  }
+  &__title {
+    margin-bottom: 3.75rem;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item {
+    border: 1px solid #000;
+    padding: 2.562rem 0;
+    text-align: center;
+  }
+}
