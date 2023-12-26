@@ -1,0 +1,37 @@
+.button
+	background-color: transparent
+	border: 2px solid rgb(277,26 ,28 )
+	width: 231px
+	height: 60px
+	border-radius: 100px
+	cursor: pointer
+	font-family: "Cera Pro"
+	transition: background, color 0.3s
+	color: rgb(227, 26, 28)
+	&:hover
+		background: rgb(277,26 ,28 )
+		color: #ffffff
+.pagination
+	font-size: 17px
+	font-family: "Cera Pro"
+	color: rgb(149, 149, 149)
+	line-height: 2.471
+	margin-bottom: 120px
+	&__number
+		cursor: pointer
+	&__number:not(:last-child)
+		margin-right: 26px
+.number
+	&_active	
+		color: rgb(227, 26, 28)
+		position: relative
+		&::after
+			content: ""
+			width: 19px
+			height: 2px
+			background-color: rgb(227, 26, 28)
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -10px
+

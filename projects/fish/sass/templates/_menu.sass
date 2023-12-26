@@ -1,0 +1,172 @@
+.menu
+	background: #ffffff
+	padding: 18px 0
+	&_main
+		box-shadow: 0px 25px 35px 0px rgba(0, 0, 0, 0.02)
+	&__logo
+		margin-right: 66px
+	&__social
+		margin-right: 70px
+	&__nav
+		margin-right: 65px
+	&__form
+		display: flex
+		align-items: center
+		margin-right: 70px
+		z-index: 9
+	&__burger
+		display: none
+		overflow: visible
+		&_active
+			display: flex
+			flex-direction: column
+			align-items: center
+			font-size: 17px
+			line-height: 2.471
+	&_active
+		overflow: visible
+		display: flex
+		flex-direction: column
+		position: fixed
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		z-index: 99
+		height: 100vh
+		&>.container
+			margin: 0 0 31px	
+			overflow: visible
+	&__callback
+		position: relative
+.burger
+	&__list
+		list-style-type: none
+		background: #ffffff
+		padding: 0
+		display: flex
+		flex-direction: column
+		align-items: center
+		font-size: 17px
+		line-height: 2.471
+		&>.list__item
+			text-align: center
+	&-button
+		width: 20px
+		height: 17px
+		display: none
+		flex-direction: column
+		&>span
+			height: 3px
+			background-color: rgb(227, 26, 28)
+			&:first-child, &:last-child
+				width: 20px
+				transition: transform 0.3s
+			&:nth-child(2)
+				width: 14px
+				margin: 4px 0 4px auto
+		&_active
+			position: relative
+			&>span
+				&:first-child, &:last-child
+					position: absolute
+					left: 0
+					top: 50%
+				&:first-child
+					transform: rotate(45deg)
+				&:last-child
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					display: none
+	&__social
+		margin-top: 71px
+.logo
+	width: 92px
+	height: 56px
+	&img
+		width: 100%
+		height: 100%
+.nav
+	display: flex
+	&__item
+		font-size: 17px
+		font-family: "Cera Pro"
+		color: rgb(10, 10, 10)
+		line-height: 1.647
+		cursor: pointer
+		transition: color 0.3s
+		&:not(:last-child)
+			margin-right: 34px
+		&:not(:first-child)
+			&:hover
+				color: rgb(227, 26, 28)
+	&__list-name
+		display: flex
+		align-items: center
+		&::after
+			content: ""
+			width: 8px
+			height: 5px
+			background: url(../img/arrow.png) no-repeat center
+			margin-left: 2px
+		&:hover
+			color: rgb(227, 26, 28)
+.list-name
+	&_active
+		color: rgb(227, 26, 28)
+		&::after
+			background: url(../img/arrow-red.png) no-repeat center
+.list  
+	background: rgb(255, 255, 255)
+	box-shadow: 0 25px 35px 0 rgba(0,0,0,0.05)
+	padding: 19px 84px 30px 33px
+	line-height: 2.471
+	position: absolute
+	list-style-type: none
+	z-index: 999
+	&__item
+		outline: none
+		cursor: pointer
+		& > a
+			&:hover
+				color: rgb(227, 26, 28)
+.form
+	&__search
+		color: rgb(149, 149, 149)
+		font-size: 17px
+		height: 18px
+		border: none
+		outline: none
+	&__button
+		border: none
+		background: url("../img/search.png")
+		width: 16px
+		height: 16px
+		margin-left: -15px
+.social
+	&__link
+		width: 18px
+		height: 12px
+	&__link:not(:last-child)
+		margin-right: 15px
+.phone
+	&__link
+		font-size: 22px
+		font-family: "Cera Pro"
+		color: rgb(10, 10, 10)
+		font-weight: bold
+		line-height: 1.273
+		white-space: nowrap
+
+
+
+
+
+
+
+			
+
+
+
+
+
